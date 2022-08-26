@@ -229,7 +229,7 @@ few moments to take effect, so please be patient. 🙂</p>
 <p>2. After adding the checklist to your PR, you should then modify this checklist with
 the status of each item according to the symbols(emojis) within the LEGEND section.</p>
 <a class="reference internal image-reference" href="https://github.com/unifyai/unifyai.github.io/blob/master/img/externally_linked/checklist_legend.png?raw=true"><img alt="https://github.com/unifyai/unifyai.github.io/blob/master/img/externally_linked/checklist_legend.png?raw=true" src="https://github.com/unifyai/unifyai.github.io/blob/master/img/externally_linked/checklist_legend.png?raw=true" style="width: 420px;" /></a>
-<p>3. When all check items are marked as (✅, ⏩, or 🆗), you should request a review for
+<p>1. When all check items are marked as (✅, ⏩, or 🆗), you should request a review for
 your PR and we will start checking your implementation and marking the items as complete
 using the checkboxes next to them.</p>
 <a class="reference internal image-reference" href="https://github.com/unifyai/unifyai.github.io/blob/master/img/externally_linked/checklist_checked.png?raw=true"><img alt="https://github.com/unifyai/unifyai.github.io/blob/master/img/externally_linked/checklist_checked.png?raw=true" src="https://github.com/unifyai/unifyai.github.io/blob/master/img/externally_linked/checklist_checked.png?raw=true" style="width: 420px;" /></a>
@@ -241,8 +241,8 @@ and address your issues.</p>
 <p><strong>Notes</strong>:</p>
 <ol class="arabic simple">
 <li><p>It is important that the PR author is the one to add the checklist generating comment in order to ensure they will have access to edit and update it later.</p></li>
-<li><p>Please pay attention to the formatting of the checklist generating comment, as it is important.</p></li>
-<li><p>Do not edit the checklist, if you are facing issues, please add them in a different comment.</p></li>
+<li><p>The checklist items’ statuses should be manually updated by the PR author. It does not automatically run any tests to update them!</p></li>
+<li><p>Do not edit the checklist text, only the emoji symbols. 😅</p></li>
 <li><p>Please refrain from using the checkboxes next to checklist items.</p></li>
 </ol>
 </section>
@@ -289,6 +289,12 @@ its respective frontend framework only.</p></li>
 <li><p>each frontend function should be tested on all backends to ensure that conversions
 are working correctly.</p></li>
 <li><p>type hints, docstrings and examples are not required for frontend functions.</p></li>
+<li><p>some frontend functions shown in the ToDo list issues are aliases of other functions.
+If you detect that this is the case, then you should add all aliases in your PR, with
+a single implementation and then simple bindings to this implementation, such as
+<code class="code docutils literal notranslate"><span class="pre">&lt;alias_name&gt;</span> <span class="pre">=</span> <span class="pre">&lt;function_name&gt;</span></code>. If you notice that an alias function has
+already been implemented and pushed, then you can simply add this one-liner binding
+and get this very simple PR merged.</p></li>
 </ol>
 <p>In the case where your chosen function exists in all frameworks by default, but
 is not implemented in Ivy’s functional API, please convert your existing GitHub
